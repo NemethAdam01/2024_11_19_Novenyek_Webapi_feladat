@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+<h1>Növények Listája</h1>
+<table>
+<tr>
+<th>Név</th><th>Tipus</th><th>Jellemző</th>
+</tr>
+    {% for item in plants %}
+<TR>
+   <TD class="c1">{{name}}</TD>
+   <TD class="c2">{{type}}</TD>
+   <TD class="c3">{{feature}}</TD>
+</TR>
+{% endfor %}
+</table>
 </body>
 </html>
