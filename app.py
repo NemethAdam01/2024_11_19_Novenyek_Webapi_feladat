@@ -12,8 +12,12 @@ plants = [
 def index():
     return render_template('index.html')
 
-@app.route('/templates/tabla', methods=["GET"])
+@app.route('/tabla', methods=["GET"])
 def tabla():
-    return render_template('tabla.html')
+    return render_template('tabla.html', plants=plants)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
 

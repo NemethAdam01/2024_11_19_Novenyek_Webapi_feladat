@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Document</title>
 </head>
 <body>
 <h1>Növények Listája</h1>
 <table>
-<tr>
-<th>Név</th><th>Tipus</th><th>Jellemző</th>
-</tr>
-    {% for item in plants %}
-<TR>
-   <TD class="c1">{{name}}</TD>
-   <TD class="c2">{{type}}</TD>
-   <TD class="c3">{{feature}}</TD>
-</TR>
+    <tr>
+        <th>Név</th><th>Tipus</th><th>Jellemző</th>
+    </tr>
+    {% for plant in plants %}
+    <tr>
+        <td>{{ plant.name }}</td>
+        <td>{{ plant.type }}</td>
+        <td>{{ plant.feature}}</td>
+    </tr>
 {% endfor %}
 </table>
+<a href="/">Vissza a főoldalra</a>
 </body>
 </html>
